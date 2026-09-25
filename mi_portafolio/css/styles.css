@@ -914,3 +914,65 @@ textarea {
     }
 
 }
+/* =====================================================
+   MODO CLARO
+===================================================== */
+
+body.light-theme {
+
+    --color-background: #f8fafc;
+    --color-surface: #ffffff;
+    --color-surface-light: #e2e8f0;
+
+    --color-text: #0f172a;
+    --color-text-muted: #475569;
+
+    --border-color: #cbd5e1;
+
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+
+body.light-theme .header {
+    background-color: rgb(248 250 252 / 0.95);
+}
+
+
+body.light-theme .section-alt {
+    background-color: #f1f5f9;
+}
+
+
+body.light-theme .footer {
+    background-color: #e2e8f0;
+}
+
+
+body.light-theme .nav-list a {
+    color: var(--color-text-muted);
+}
+
+
+body.light-theme .nav-list a:hover {
+    color: var(--color-text);
+}
+
+
+body.light-theme .skill-badge {
+    background-color: rgb(37 99 235 / 0.1);
+    color: #1d4ed8;
+}
+
+
+body.light-theme .form-group input,
+body.light-theme .form-group textarea {
+    background-color: #ffffff;
+    color: #0f172a;
+}
+
+
+body.light-theme .component-example input {
+    background-color: #ffffff;
+    color: #0f172a;
+}
