@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Sistema de Gestión Académica</title>
+  <desc id="desc">Vista de un panel académico con estudiantes, materias y calificaciones.</desc>
+  <defs>
+    <linearGradient id="bg3" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="#0f172a"/>
+  <rect x="80" y="90" width="1040" height="620" rx="24" fill="#111827"/>
+  <rect x="120" y="130" width="220" height="540" rx="18" fill="url(#bg3)"/>
+  <rect x="390" y="130" width="690" height="120" rx="18" fill="#1f2937"/>
+  <rect x="390" y="290" width="690" height="150" rx="18" fill="#111827"/>
+  <rect x="390" y="480" width="690" height="150" rx="18" fill="#1f2937"/>
+  <circle cx="185" cy="200" r="26" fill="#f8fafc"/>
+  <rect x="225" y="185" width="80" height="14" rx="7" fill="#f8fafc" opacity="0.8"/>
+  <rect x="225" y="215" width="90" height="12" rx="6" fill="#f8fafc" opacity="0.6"/>
+  <rect x="430" y="160" width="180" height="16" rx="8" fill="#fbbf24"/>
+  <rect x="430" y="190" width="240" height="14" rx="7" fill="#f8fafc" opacity="0.45"/>
+  <rect x="430" y="330" width="150" height="18" rx="9" fill="#fbbf24"/>
+  <rect x="430" y="370" width="560" height="16" rx="8" fill="#f8fafc" opacity="0.18"/>
+  <rect x="430" y="520" width="150" height="18" rx="9" fill="#f8fafc" opacity="0.75"/>
+  <rect x="430" y="560" width="500" height="16" rx="8" fill="#f8fafc" opacity="0.18"/>
+</svg>

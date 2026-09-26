@@ -3,88 +3,125 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <meta
         name="description"
-        content="Portafolio personal de Brayan Martínez, estudiante de Ingeniería de Software."
+        content="Portafolio profesional de Brayan Martínez, estudiante de Ingeniería de Software."
+    >
+
+    <meta
+        name="author"
+        content="Brayan Martínez"
     >
 
     <title>Brayan Martínez | Portafolio</title>
-    <link rel="stylesheet" href="css/styles.css">
+
+    <link
+        rel="stylesheet"
+        href="css/styles.css"
+    >
 </head>
 
 <body>
 
+    <!-- =========================
+         HEADER / NAVEGACIÓN
+    ========================== -->
     <header class="header">
 
-        <nav class="navbar" aria-label="Navegación principal">
+        <div class="container navbar">
 
-            <a href="#inicio" class="logo">
+            <a
+                href="#inicio"
+                class="logo"
+                aria-label="Ir al inicio"
+            >
                 Brayan<span>.</span>
             </a>
 
-            <button
-                class="menu-toggle"
-                id="menu-toggle"
-                type="button"
-                aria-label="Abrir menú"
-                aria-expanded="false"
+            <nav
+                class="nav"
+                aria-label="Navegación principal"
             >
-                ☰
-            </button>
 
-            <ul class="nav-list" id="nav-list">
+                <button
+                    id="menu-toggle"
+                    class="menu-toggle"
+                    aria-label="Abrir menú"
+                    aria-expanded="false"
+                    aria-controls="nav-list"
+                    type="button"
+                >
+                    ☰
+                </button>
 
-                <li>
-                    <a href="#inicio">Inicio</a>
-                </li>
+                <ul
+                    id="nav-list"
+                    class="nav-list"
+                >
+                    <li>
+                        <a href="#inicio">Inicio</a>
+                    </li>
 
-                <li>
-                    <a href="#sobre-mi">Sobre mí</a>
-                </li>
+                    <li>
+                        <a href="#sobre-mi">Sobre mí</a>
+                    </li>
 
-                <li>
-                    <a href="#skills">Skills</a>
-                </li>
+                    <li>
+                        <a href="#skills">Habilidades</a>
+                    </li>
 
-                <li>
-                    <a href="#proyectos">Proyectos</a>
-                </li>
+                    <li>
+                        <a href="#proyectos">Proyectos</a>
+                    </li>
 
-                <li>
-                    <a href="#design-system">Design System</a>
-                </li>
+                    <li>
+                        <a href="#design-system">Design System</a>
+                    </li>
 
-                <li>
-                    <a href="#contacto">Contacto</a>
-                </li>
+                    <li>
+                        <a href="#contacto">Contacto</a>
+                    </li>
+                </ul>
 
-            </ul>
+            </nav>
 
             <button
-                class="theme-toggle"
                 id="theme-toggle"
+                class="theme-toggle"
                 type="button"
-                aria-label="Cambiar tema"
+                aria-label="Cambiar a modo claro"
             >
                 🌙
             </button>
 
-        </nav>
+        </div>
 
     </header>
 
 
-    <!-- ==================== CONTENIDO PRINCIPAL ==================== -->
     <main>
 
-        <!-- ==================== INICIO ==================== -->
-        <section id="inicio" class="hero">
+        <!-- =========================
+             INICIO
+        ========================== -->
+        <section
+            id="inicio"
+            class="hero section"
+        >
 
             <div class="container hero-content">
 
                 <div class="hero-text">
+
+                    <span class="section-tag">
+                        PORTAFOLIO PERSONAL
+                    </span>
 
                     <p class="hero-greeting">
                         Hola, soy
@@ -99,19 +136,31 @@
                     </h2>
 
                     <p class="hero-description">
-                        Me interesa el desarrollo de aplicaciones web,
-                        bases de datos e inteligencia artificial.
-                        Actualmente continúo fortaleciendo mis conocimientos
-                        en tecnologías de desarrollo de software.
+                        Soy estudiante de Ingeniería de Software apasionado
+                        por el desarrollo de aplicaciones web, la inteligencia
+                        artificial y la gestión de bases de datos. Me interesa
+                        crear soluciones tecnológicas funcionales, modernas
+                        y fáciles de utilizar.
                     </p>
 
-                    <div class="hero-buttons">
+                    <div class="hero-meta" aria-label="Información rápida">
+                        <span>Disponible para proyectos</span>
+                        <span>Frontend · Backend · IA</span>
+                    </div>
 
-                        <a href="#proyectos" class="btn btn-primary">
+                    <div class="hero-actions">
+
+                        <a
+                            href="#proyectos"
+                            class="btn btn-primary"
+                        >
                             Ver proyectos
                         </a>
 
-                        <a href="#contacto" class="btn btn-secondary">
+                        <a
+                            href="#contacto"
+                            class="btn btn-secondary"
+                        >
                             Contactarme
                         </a>
 
@@ -122,13 +171,17 @@
 
                 <figure class="hero-image">
 
-                    <img
-                        src="img/perfil.jpg"
-                        alt="Fotografía de Brayan Martínez"
-                    >
+                    <div class="profile-image-wrapper">
+
+                        <img
+                            src="img/perfil.svg"
+                            alt="Ilustración de Brayan Martínez"
+                        >
+
+                    </div>
 
                     <figcaption>
-                        Estudiante de Ingeniería de Software
+                        Ingeniería de Software · Desarrollo Web · IA
                     </figcaption>
 
                 </figure>
@@ -138,79 +191,181 @@
         </section>
 
 
-        <!-- ==================== SOBRE MÍ ==================== -->
-        <section id="sobre-mi" class="section">
+        <!-- =========================
+             SOBRE MÍ
+        ========================== -->
+        <section
+            id="sobre-mi"
+            class="section section-alt"
+        >
 
             <div class="container">
 
-                <header class="section-header">
+                <div class="section-header">
 
-                    <p class="section-label">
-                        Conóceme
-                    </p>
+                    <span class="section-tag">
+                        CONÓCEME
+                    </span>
 
                     <h2>
                         Sobre mí
                     </h2>
 
-                </header>
+                    <p>
+                        Un poco sobre mi formación, intereses y objetivos.
+                    </p>
+
+                </div>
 
 
-                <div class="about-content">
+                <div class="about-grid">
 
-                    <article class="about-text">
+                    <article class="about-content">
 
-                        <h3>
-                            Perfil profesional
-                        </h3>
+                        <div class="about-text">
 
-                        <p>
-                            Soy estudiante de Ingeniería de Software
-                            interesado en el desarrollo de soluciones
-                            tecnológicas y aplicaciones web.
-                        </p>
+                            <h3>
+                                Construyendo soluciones con tecnología
+                            </h3>
 
-                        <p>
-                            Durante mi formación académica he trabajado
-                            con diferentes tecnologías relacionadas con
-                            programación, bases de datos, desarrollo web
-                            e inteligencia artificial.
-                        </p>
+                            <p>
+                                Soy Brayan Martínez, estudiante de Ingeniería
+                                de Software, interesado en el desarrollo de
+                                soluciones tecnológicas que permitan resolver
+                                problemas reales mediante el uso del software.
+                            </p>
 
-                        <p>
-                            Mi objetivo es continuar adquiriendo
-                            experiencia y desarrollar proyectos que me
-                            permitan aplicar mis conocimientos en
-                            situaciones reales.
-                        </p>
+                            <p>
+                                Durante mi formación académica he trabajado
+                                con tecnologías relacionadas con desarrollo
+                                web, bases de datos, inteligencia artificial
+                                y desarrollo de aplicaciones.
+                            </p>
+
+                            <p>
+                                Actualmente busco seguir fortaleciendo mis
+                                conocimientos y desarrollar proyectos que me
+                                permitan aplicar lo aprendido mientras
+                                continúo creciendo como desarrollador
+                                de software.
+                            </p>
+
+
+                            <div class="about-highlights">
+
+                                <article class="highlight-item">
+                                    <span class="highlight-icon">
+                                        &lt;/&gt;
+                                    </span>
+
+                                    <div>
+                                        <strong>
+                                            Desarrollo Web
+                                        </strong>
+
+                                        <span>
+                                            Creación de aplicaciones web
+                                        </span>
+                                    </div>
+                                </article>
+
+
+                                <article class="highlight-item">
+                                    <span class="highlight-icon">
+                                        AI
+                                    </span>
+
+                                    <div>
+                                        <strong>
+                                            Inteligencia Artificial
+                                        </strong>
+
+                                        <span>
+                                            Aplicaciones de IA y clasificación
+                                        </span>
+                                    </div>
+                                </article>
+
+
+                                <article class="highlight-item">
+                                    <span class="highlight-icon">
+                                        DB
+                                    </span>
+
+                                    <div>
+                                        <strong>
+                                            Bases de Datos
+                                        </strong>
+
+                                        <span>
+                                            Diseño y gestión de información
+                                        </span>
+                                    </div>
+                                </article>
+
+                            </div>
+
+                        </div>
 
                     </article>
 
 
-                    <aside class="about-info">
+                    <aside class="about-card">
 
-                        <h3>
-                            Información académica
-                        </h3>
+                        <div class="about-card-header">
+                            <span class="status-dot"></span>
 
-                        <ul>
+                            <span>
+                                Información académica
+                            </span>
+                        </div>
 
-                            <li>
-                                <strong>Formación:</strong>
-                                Ingeniería de Software
-                            </li>
+                        <div class="about-info">
 
-                            <li>
-                                <strong>Área:</strong>
-                                Desarrollo de Software
-                            </li>
+                            <div class="info-item">
+                                <span class="info-label">
+                                    Carrera
+                                </span>
 
-                            <li>
-                                <strong>Intereses:</strong>
-                                Desarrollo Web, IA y Bases de Datos
-                            </li>
+                                <strong>
+                                    Ingeniería de Software
+                                </strong>
+                            </div>
 
-                        </ul>
+
+                            <div class="info-item">
+                                <span class="info-label">
+                                    Área
+                                </span>
+
+                                <strong>
+                                    Desarrollo de Software
+                                </strong>
+                            </div>
+
+
+                            <div class="info-item">
+                                <span class="info-label">
+                                    Intereses
+                                </span>
+
+                                <strong>
+                                    Desarrollo Web
+                                </strong>
+                            </div>
+
+
+                            <div class="info-item">
+                                <span class="info-label">
+                                    Tecnologías
+                                </span>
+
+                                <strong>
+                                    Python · JavaScript · SQL
+                                </strong>
+                            </div>
+
+                        </div>
 
                     </aside>
 
@@ -221,39 +376,56 @@
         </section>
 
 
-        <!-- ==================== SKILLS ==================== -->
-        <section id="skills" class="section section-alt">
+        <!-- =========================
+             HABILIDADES
+        ========================== -->
+        <section
+            id="skills"
+            class="section"
+        >
 
             <div class="container">
 
-                <header class="section-header">
+                <div class="section-header">
 
-                    <p class="section-label">
-                        Tecnologías
-                    </p>
+                    <span class="section-tag">
+                        TECNOLOGÍAS
+                    </span>
 
                     <h2>
                         Habilidades
                     </h2>
 
                     <p>
-                        Tecnologías y herramientas que he utilizado
-                        durante mi formación académica y proyectos.
+                        Tecnologías y herramientas utilizadas durante
+                        mi formación y desarrollo de proyectos.
                     </p>
 
-                </header>
+                </div>
 
 
                 <div class="skills-grid">
 
-                    <!-- Frontend -->
+                    <!-- FRONTEND -->
                     <article class="skill-category">
 
-                        <h3>
-                            Frontend
-                        </h3>
+                        <div class="skill-category-header">
+                            <span class="category-icon">
+                                &lt;/&gt;
+                            </span>
 
-                        <div class="skills-list">
+                            <div>
+                                <h3>
+                                    Frontend
+                                </h3>
+
+                                <p>
+                                    Interfaces web
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="skill-list">
 
                             <span class="skill-badge">
                                 HTML5
@@ -276,14 +448,26 @@
                     </article>
 
 
-                    <!-- Backend -->
+                    <!-- BACKEND -->
                     <article class="skill-category">
 
-                        <h3>
-                            Backend
-                        </h3>
+                        <div class="skill-category-header">
+                            <span class="category-icon">
+                                &lt;_&gt;
+                            </span>
 
-                        <div class="skills-list">
+                            <div>
+                                <h3>
+                                    Backend
+                                </h3>
+
+                                <p>
+                                    Lógica y aplicaciones
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="skill-list">
 
                             <span class="skill-badge">
                                 Python
@@ -302,14 +486,26 @@
                     </article>
 
 
-                    <!-- Bases de datos -->
+                    <!-- BASES DE DATOS -->
                     <article class="skill-category">
 
-                        <h3>
-                            Bases de datos
-                        </h3>
+                        <div class="skill-category-header">
+                            <span class="category-icon">
+                                DB
+                            </span>
 
-                        <div class="skills-list">
+                            <div>
+                                <h3>
+                                    Bases de datos
+                                </h3>
+
+                                <p>
+                                    Gestión de información
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="skill-list">
 
                             <span class="skill-badge">
                                 PostgreSQL
@@ -332,14 +528,26 @@
                     </article>
 
 
-                    <!-- Herramientas -->
+                    <!-- HERRAMIENTAS -->
                     <article class="skill-category">
 
-                        <h3>
-                            Herramientas
-                        </h3>
+                        <div class="skill-category-header">
+                            <span class="category-icon">
+                                ⚙
+                            </span>
 
-                        <div class="skills-list">
+                            <div>
+                                <h3>
+                                    Herramientas
+                                </h3>
+
+                                <p>
+                                    Desarrollo y control
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="skill-list">
 
                             <span class="skill-badge">
                                 Git
@@ -350,7 +558,7 @@
                             </span>
 
                             <span class="skill-badge">
-                                VS Code
+                                Visual Studio Code
                             </span>
 
                         </div>
@@ -364,16 +572,21 @@
         </section>
 
 
-        <!-- ==================== PROYECTOS ==================== -->
-        <section id="proyectos" class="section">
+        <!-- =========================
+             PROYECTOS
+        ========================== -->
+        <section
+            id="proyectos"
+            class="section section-alt"
+        >
 
             <div class="container">
 
-                <header class="section-header">
+                <div class="section-header">
 
-                    <p class="section-label">
-                        Mi trabajo
-                    </p>
+                    <span class="section-tag">
+                        PORTAFOLIO
+                    </span>
 
                     <h2>
                         Proyectos destacados
@@ -384,40 +597,43 @@
                         desarrollados durante mi formación.
                     </p>
 
-                </header>
+                </div>
 
 
-                <!-- Filtros -->
-                <div class="project-filters">
+                <!-- FILTROS -->
+                <div
+                    class="project-filters"
+                    aria-label="Filtrar proyectos"
+                >
 
                     <button
                         class="filter-btn active"
-                        data-filter="all"
                         type="button"
+                        data-filter="all"
                     >
                         Todos
                     </button>
 
                     <button
                         class="filter-btn"
-                        data-filter="web"
                         type="button"
+                        data-filter="web"
                     >
                         Web
                     </button>
 
                     <button
                         class="filter-btn"
-                        data-filter="django"
                         type="button"
+                        data-filter="django"
                     >
                         Django
                     </button>
 
                     <button
                         class="filter-btn"
-                        data-filter="ia"
                         type="button"
+                        data-filter="ia"
                     >
                         IA
                     </button>
@@ -427,7 +643,7 @@
 
                 <div class="projects-grid">
 
-                    <!-- Proyecto 1 -->
+                    <!-- PROYECTO 1 -->
                     <article
                         class="project-card"
                         data-category="ia django"
@@ -436,17 +652,18 @@
                         <figure class="project-image">
 
                             <img
-                                src="img/proyecto-1.jpg"
-                                alt="Captura del proyecto BananoTech IA"
+                                src="img/proyecto-1.svg"
+                                alt="Ilustración del proyecto BananoTech IA"
                             >
 
                         </figure>
 
+
                         <div class="project-content">
 
-                            <p class="project-type">
+                            <span class="project-category">
                                 Inteligencia Artificial
-                            </p>
+                            </span>
 
                             <h3>
                                 BananoTech IA
@@ -457,6 +674,23 @@
                                 del banano destinado a exportación y consumo
                                 local mediante Inteligencia Artificial.
                             </p>
+
+
+                            <div class="project-problem">
+
+                                <strong>
+                                    Problema que resuelve
+                                </strong>
+
+                                <p>
+                                    Busca facilitar la clasificación del
+                                    banano mediante una aplicación web que
+                                    utiliza inteligencia artificial para
+                                    apoyar el análisis y la toma de decisiones.
+                                </p>
+
+                            </div>
+
 
                             <div class="project-technologies">
 
@@ -472,19 +706,28 @@
                                     IA
                                 </span>
 
+                                <span class="skill-badge">
+                                    PostgreSQL
+                                </span>
+
                             </div>
+
 
                             <div class="project-links">
 
                                 <a
                                     href="#"
+                                    class="btn btn-primary"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
                                     GitHub
                                 </a>
 
-                                <a href="#">
+                                <a
+                                    href="#"
+                                    class="btn btn-secondary"
+                                >
                                     Ver proyecto
                                 </a>
 
@@ -495,7 +738,7 @@
                     </article>
 
 
-                    <!-- Proyecto 2 -->
+                    <!-- PROYECTO 2 -->
                     <article
                         class="project-card"
                         data-category="web django"
@@ -504,27 +747,45 @@
                         <figure class="project-image">
 
                             <img
-                                src="img/proyecto-2.jpg"
-                                alt="Captura del sistema de gestión médica"
+                                src="img/proyecto-2.svg"
+                                alt="Ilustración del sistema de gestión médica"
                             >
 
                         </figure>
 
+
                         <div class="project-content">
 
-                            <p class="project-type">
+                            <span class="project-category">
                                 Desarrollo Web
-                            </p>
+                            </span>
 
                             <h3>
                                 Sistema de Gestión Médica
                             </h3>
 
                             <p>
-                                Aplicación web para administrar pacientes,
-                                doctores, citas médicas, exámenes y
-                                diferentes procesos de atención.
+                                Aplicación web para gestionar información
+                                de pacientes, médicos, citas, atenciones
+                                y exámenes médicos.
                             </p>
+
+
+                            <div class="project-problem">
+
+                                <strong>
+                                    Problema que resuelve
+                                </strong>
+
+                                <p>
+                                    Permite organizar la información de
+                                    pacientes, médicos, citas y atenciones,
+                                    facilitando la consulta y administración
+                                    de los registros.
+                                </p>
+
+                            </div>
+
 
                             <div class="project-technologies">
 
@@ -540,19 +801,28 @@
                                     SQLite
                                 </span>
 
+                                <span class="skill-badge">
+                                    Bootstrap
+                                </span>
+
                             </div>
+
 
                             <div class="project-links">
 
                                 <a
                                     href="#"
+                                    class="btn btn-primary"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
                                     GitHub
                                 </a>
 
-                                <a href="#">
+                                <a
+                                    href="#"
+                                    class="btn btn-secondary"
+                                >
                                     Ver proyecto
                                 </a>
 
@@ -563,7 +833,7 @@
                     </article>
 
 
-                    <!-- Proyecto 3 -->
+                    <!-- PROYECTO 3 -->
                     <article
                         class="project-card"
                         data-category="web django"
@@ -572,54 +842,82 @@
                         <figure class="project-image">
 
                             <img
-                                src="img/proyecto-3.jpg"
-                                alt="Captura del sistema académico"
+                                src="img/proyecto-3.svg"
+                                alt="Ilustración del sistema de gestión académica"
                             >
 
                         </figure>
 
+
                         <div class="project-content">
 
-                            <p class="project-type">
-                                Sistema Académico
-                            </p>
+                            <span class="project-category">
+                                Desarrollo Web
+                            </span>
 
                             <h3>
                                 Sistema de Gestión Académica
                             </h3>
 
                             <p>
-                                Sistema para administrar períodos,
-                                profesores, estudiantes y calificaciones.
+                                Aplicación web para administrar períodos,
+                                profesores, estudiantes y calificaciones
+                                académicas.
                             </p>
 
-                            <div class="project-technologies">
 
-                                <span class="skill-badge">
-                                    Django
-                                </span>
+                            <div class="project-problem">
+
+                                <strong>
+                                    Problema que resuelve
+                                </strong>
+
+                                <p>
+                                    Facilita la administración de períodos
+                                    académicos, profesores, estudiantes y
+                                    calificaciones mediante información
+                                    centralizada.
+                                </p>
+
+                            </div>
+
+
+                            <div class="project-technologies">
 
                                 <span class="skill-badge">
                                     Python
                                 </span>
 
                                 <span class="skill-badge">
+                                    Django
+                                </span>
+
+                                <span class="skill-badge">
                                     SQLite
                                 </span>
 
+                                <span class="skill-badge">
+                                    JavaScript
+                                </span>
+
                             </div>
+
 
                             <div class="project-links">
 
                                 <a
                                     href="#"
+                                    class="btn btn-primary"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
                                     GitHub
                                 </a>
 
-                                <a href="#">
+                                <a
+                                    href="#"
+                                    class="btn btn-secondary"
+                                >
                                     Ver proyecto
                                 </a>
 
@@ -636,19 +934,24 @@
         </section>
 
 
-        <!-- ==================== DESIGN SYSTEM ==================== -->
-        <section id="design-system" class="section section-alt">
+        <!-- =========================
+             DESIGN SYSTEM
+        ========================== -->
+        <section
+            id="design-system"
+            class="section"
+        >
 
             <div class="container">
 
-                <header class="section-header">
+                <div class="section-header">
 
-                    <p class="section-label">
-                        Sistema visual
-                    </p>
+                    <span class="section-tag">
+                        DESIGN SYSTEM
+                    </span>
 
                     <h2>
-                        Design System / Componentes
+                        Sistema de diseño
                     </h2>
 
                     <p>
@@ -656,41 +959,124 @@
                         utilizados en este portafolio.
                     </p>
 
-                </header>
+                </div>
 
 
-                <!-- Colores -->
+                <!-- COLORES -->
                 <article class="design-block">
 
-                    <h3>
-                        Colores
-                    </h3>
+                    <div class="design-block-header">
+                        <h3>
+                            Paleta de colores
+                        </h3>
+
+                        <p>
+                            Colores principales utilizados en la interfaz.
+                        </p>
+                    </div>
+
 
                     <div class="color-grid">
 
-                        <div class="color-item color-primary">
-                            <span>Primary</span>
-                            <strong>#2563EB</strong>
+                        <div class="color-card">
+
+                            <div
+                                class="color-preview color-primary"
+                            ></div>
+
+                            <strong>
+                                Primary
+                            </strong>
+
+                            <span>
+                                #2563EB
+                            </span>
+
                         </div>
 
-                        <div class="color-item color-secondary">
-                            <span>Secondary</span>
-                            <strong>#7C3AED</strong>
+
+                        <div class="color-card">
+
+                            <div
+                                class="color-preview color-primary-dark"
+                            ></div>
+
+                            <strong>
+                                Primary Dark
+                            </strong>
+
+                            <span>
+                                #1D4ED8
+                            </span>
+
                         </div>
 
-                        <div class="color-item color-background">
-                            <span>Background</span>
-                            <strong>#0F172A</strong>
+
+                        <div class="color-card">
+
+                            <div
+                                class="color-preview color-secondary"
+                            ></div>
+
+                            <strong>
+                                Secondary
+                            </strong>
+
+                            <span>
+                                #7C3AED
+                            </span>
+
                         </div>
 
-                        <div class="color-item color-surface">
-                            <span>Surface</span>
-                            <strong>#1E293B</strong>
+
+                        <div class="color-card">
+
+                            <div
+                                class="color-preview color-background"
+                            ></div>
+
+                            <strong>
+                                Background
+                            </strong>
+
+                            <span>
+                                #0F172A
+                            </span>
+
                         </div>
 
-                        <div class="color-item color-text">
-                            <span>Text</span>
-                            <strong>#F8FAFC</strong>
+
+                        <div class="color-card">
+
+                            <div
+                                class="color-preview color-surface"
+                            ></div>
+
+                            <strong>
+                                Surface
+                            </strong>
+
+                            <span>
+                                #1E293B
+                            </span>
+
+                        </div>
+
+
+                        <div class="color-card">
+
+                            <div
+                                class="color-preview color-success"
+                            ></div>
+
+                            <strong>
+                                Success
+                            </strong>
+
+                            <span>
+                                #22C55E
+                            </span>
+
                         </div>
 
                     </div>
@@ -698,38 +1084,45 @@
                 </article>
 
 
-                <!-- Tipografía -->
+                <!-- TIPOGRAFÍA -->
                 <article class="design-block">
 
-                    <h3>
-                        Tipografía
-                    </h3>
+                    <div class="design-block-header">
+                        <h3>
+                            Tipografía
+                        </h3>
+
+                        <p>
+                            Jerarquía visual utilizada en el portafolio.
+                        </p>
+                    </div>
+
 
                     <div class="typography-demo">
 
                         <h1>
-                            Heading H1
+                            Heading 1
                         </h1>
 
                         <h2>
-                            Heading H2
+                            Heading 2
                         </h2>
 
                         <h3>
-                            Heading H3
+                            Heading 3
                         </h3>
 
                         <p>
-                            Este es un ejemplo de texto principal
-                            utilizado en el portafolio.
+                            Este es un ejemplo de texto normal utilizado
+                            para contenido descriptivo.
                         </p>
 
                         <p class="text-muted">
-                            Este es un ejemplo de texto secundario.
+                            Este es un texto secundario con menor contraste.
                         </p>
 
-                        <a href="#">
-                            Enlace de ejemplo
+                        <a href="#contacto">
+                            Ejemplo de enlace
                         </a>
 
                     </div>
@@ -737,38 +1130,53 @@
                 </article>
 
 
-                <!-- Espaciado -->
+                <!-- ESPACIADO -->
                 <article class="design-block">
 
-                    <h3>
-                        Espaciado
-                    </h3>
+                    <div class="design-block-header">
+
+                        <h3>
+                            Escala de espaciado
+                        </h3>
+
+                        <p>
+                            Sistema de separación utilizado para mantener
+                            consistencia visual.
+                        </p>
+
+                    </div>
+
 
                     <div class="spacing-demo">
 
-                        <div>
+                        <div class="spacing-item">
                             <span>XS</span>
-                            <i class="space-xs"></i>
+                            <div class="spacing-box spacing-xs"></div>
+                            <small>0.25rem</small>
                         </div>
 
-                        <div>
+                        <div class="spacing-item">
                             <span>SM</span>
-                            <i class="space-sm"></i>
+                            <div class="spacing-box spacing-sm"></div>
+                            <small>0.5rem</small>
                         </div>
 
-                        <div>
+                        <div class="spacing-item">
                             <span>MD</span>
-                            <i class="space-md"></i>
+                            <div class="spacing-box spacing-md"></div>
+                            <small>1rem</small>
                         </div>
 
-                        <div>
+                        <div class="spacing-item">
                             <span>LG</span>
-                            <i class="space-lg"></i>
+                            <div class="spacing-box spacing-lg"></div>
+                            <small>2rem</small>
                         </div>
 
-                        <div>
+                        <div class="spacing-item">
                             <span>XL</span>
-                            <i class="space-xl"></i>
+                            <div class="spacing-box spacing-xl"></div>
+                            <small>4rem</small>
                         </div>
 
                     </div>
@@ -776,12 +1184,22 @@
                 </article>
 
 
-                <!-- Componentes -->
+                <!-- COMPONENTES -->
                 <article class="design-block">
 
-                    <h3>
-                        Componentes
-                    </h3>
+                    <div class="design-block-header">
+
+                        <h3>
+                            Componentes reutilizables
+                        </h3>
+
+                        <p>
+                            Componentes utilizados en diferentes partes
+                            del portafolio.
+                        </p>
+
+                    </div>
+
 
                     <div class="components-demo">
 
@@ -791,19 +1209,23 @@
                                 Botones
                             </h4>
 
-                            <button
-                                class="btn btn-primary"
-                                type="button"
-                            >
-                                Primario
-                            </button>
+                            <div class="component-row">
 
-                            <button
-                                class="btn btn-secondary"
-                                type="button"
-                            >
-                                Secundario
-                            </button>
+                                <button
+                                    class="btn btn-primary"
+                                    type="button"
+                                >
+                                    Botón primario
+                                </button>
+
+                                <button
+                                    class="btn btn-secondary"
+                                    type="button"
+                                >
+                                    Botón secundario
+                                </button>
+
+                            </div>
 
                         </div>
 
@@ -811,12 +1233,24 @@
                         <div class="component-example">
 
                             <h4>
-                                Badge
+                                Skill Badge
                             </h4>
 
-                            <span class="skill-badge">
-                                JavaScript
-                            </span>
+                            <div class="component-row">
+
+                                <span class="skill-badge">
+                                    JavaScript
+                                </span>
+
+                                <span class="skill-badge">
+                                    Python
+                                </span>
+
+                                <span class="skill-badge">
+                                    Django
+                                </span>
+
+                            </div>
 
                         </div>
 
@@ -834,8 +1268,27 @@
                             <input
                                 type="text"
                                 id="demo-input"
-                                placeholder="Escribe aquí..."
+                                placeholder="Escribe tu nombre"
                             >
+
+                        </div>
+
+
+                        <div class="component-example">
+
+                            <h4>
+                                Textarea
+                            </h4>
+
+                            <label for="demo-textarea">
+                                Mensaje
+                            </label>
+
+                            <textarea
+                                id="demo-textarea"
+                                rows="4"
+                                placeholder="Escribe un mensaje"
+                            ></textarea>
 
                         </div>
 
@@ -848,31 +1301,37 @@
         </section>
 
 
-        <!-- ==================== CONTACTO ==================== -->
-        <section id="contacto" class="section">
+        <!-- =========================
+             CONTACTO
+        ========================== -->
+        <section
+            id="contacto"
+            class="section section-alt"
+        >
 
             <div class="container">
 
-                <header class="section-header">
+                <div class="section-header">
 
-                    <p class="section-label">
-                        Hablemos
-                    </p>
+                    <span class="section-tag">
+                        CONTACTO
+                    </span>
 
                     <h2>
-                        Contacto
+                        Hablemos
                     </h2>
 
                     <p>
-                        Si deseas conocer más sobre mis proyectos,
-                        puedes escribirme.
+                        Si quieres conocer más sobre mis proyectos,
+                        puedes ponerte en contacto conmigo.
                     </p>
 
-                </header>
+                </div>
 
 
-                <div class="contact-content">
+                <div class="contact-grid">
 
+                    <!-- INFORMACIÓN -->
                     <aside class="contact-info">
 
                         <h3>
@@ -880,103 +1339,155 @@
                         </h3>
 
                         <p>
-                            Puedes utilizar este formulario para
-                            comunicarte conmigo.
+                            Estoy interesado en oportunidades para seguir
+                            aprendiendo, desarrollar proyectos y aplicar
+                            mis conocimientos de Ingeniería de Software.
                         </p>
 
-                        <p>
-                            <strong>Correo:</strong>
-                            tu-correo@example.com
-                        </p>
+
+                        <div class="contact-item">
+
+                            <span class="contact-icon">
+                                @
+                            </span>
+
+                            <div>
+
+                                <span>
+                                    Correo electrónico
+                                </span>
+
+                                <a href="mailto:tu-correo@example.com">
+                                    tu-correo@example.com
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <span class="contact-icon">
+                                GH
+                            </span>
+
+                            <div>
+
+                                <span>
+                                    GitHub
+                                </span>
+
+                                <a
+                                    href="#"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Mi perfil de GitHub
+                                </a>
+
+                            </div>
+
+                        </div>
 
                     </aside>
 
 
-                    <form
-                        class="contact-form"
-                        id="contact-form"
-                        novalidate
-                    >
+                    <!-- FORMULARIO -->
+                    <div class="contact-form-wrapper">
 
-                        <div class="form-group">
-
-                            <label for="nombre">
-                                Nombre
-                            </label>
-
-                            <input
-                                type="text"
-                                id="nombre"
-                                name="nombre"
-                                placeholder="Tu nombre"
-                                required
-                            >
-
-                            <small
-                                class="error-message"
-                                id="nombre-error"
-                            ></small>
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label for="email">
-                                Correo electrónico
-                            </label>
-
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                placeholder="correo@ejemplo.com"
-                                required
-                            >
-
-                            <small
-                                class="error-message"
-                                id="email-error"
-                            ></small>
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label for="mensaje">
-                                Mensaje
-                            </label>
-
-                            <textarea
-                                id="mensaje"
-                                name="mensaje"
-                                rows="6"
-                                placeholder="Escribe tu mensaje..."
-                                required
-                            ></textarea>
-
-                            <small
-                                class="error-message"
-                                id="mensaje-error"
-                            ></small>
-
-                        </div>
-
-
-                        <button
-                            type="submit"
-                            class="btn btn-primary"
+                        <form
+                            id="contact-form"
+                            class="contact-form"
+                            novalidate
                         >
-                            Enviar mensaje
-                        </button>
 
-                        <p
-                            id="form-message"
-                            class="form-message"
-                        ></p>
+                            <div class="form-group">
 
-                    </form>
+                                <label for="nombre">
+                                    Nombre
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="nombre"
+                                    name="nombre"
+                                    placeholder="Tu nombre"
+                                    autocomplete="name"
+                                    required
+                                >
+
+                                <small
+                                    id="nombre-error"
+                                    class="form-error"
+                                ></small>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="email">
+                                    Correo electrónico
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="tu-correo@example.com"
+                                    autocomplete="email"
+                                    required
+                                >
+
+                                <small
+                                    id="email-error"
+                                    class="form-error"
+                                ></small>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="mensaje">
+                                    Mensaje
+                                </label>
+
+                                <textarea
+                                    id="mensaje"
+                                    name="mensaje"
+                                    rows="6"
+                                    placeholder="Escribe tu mensaje..."
+                                    required
+                                ></textarea>
+
+                                <small
+                                    id="mensaje-error"
+                                    class="form-error"
+                                ></small>
+
+                            </div>
+
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary btn-submit"
+                            >
+                                Enviar mensaje
+                            </button>
+
+
+                            <p
+                                id="form-message"
+                                class="form-message"
+                                role="status"
+                                aria-live="polite"
+                            ></p>
+
+                        </form>
+
+                    </div>
 
                 </div>
 
@@ -987,7 +1498,9 @@
     </main>
 
 
-    <!-- ==================== FOOTER ==================== -->
+    <!-- =========================
+         FOOTER
+    ========================== -->
     <footer class="footer">
 
         <div class="container footer-content">
@@ -997,7 +1510,7 @@
             </p>
 
             <a href="#inicio">
-                Volver al inicio ↑
+                Volver arriba ↑
             </a>
 
         </div>
@@ -1005,7 +1518,7 @@
     </footer>
 
 
-    <!-- Botón volver arriba -->
+    <!-- BOTÓN VOLVER ARRIBA -->
     <button
         id="back-to-top"
         class="back-to-top"
@@ -1021,3 +1534,4 @@
 </body>
 
 </html>
+```
