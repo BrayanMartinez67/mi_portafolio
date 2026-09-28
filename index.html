@@ -77,6 +77,18 @@
                     </li>
 
                     <li>
+                        <button
+                            id="design-system-toggle"
+                            class="nav-design-toggle"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="design-system-panel"
+                        >
+                            Design System
+                        </button>
+                    </li>
+
+                    <li>
                         <a href="#contacto" data-i18n="nav.contact">Contacto</a>
                     </li>
                 </ul>
@@ -1076,6 +1088,163 @@
         </section>
 
     </main>
+
+    <div id="design-system-panel" class="design-system-panel" aria-hidden="true">
+        <div class="design-system-backdrop" data-close="true"></div>
+
+        <aside class="design-system-card" role="dialog" aria-modal="true" aria-labelledby="design-system-title">
+            <div class="design-system-header">
+                <div>
+                    <span class="section-tag">DESIGN SYSTEM</span>
+                    <h3 id="design-system-title">Sistema de diseño</h3>
+                </div>
+
+                <button id="design-system-close" class="design-system-close" type="button" aria-label="Cerrar panel">
+                    ✕
+                </button>
+            </div>
+
+            <div class="design-system-scroll">
+                <article class="design-block">
+                    <div class="design-block-header">
+                        <h3>Paleta de colores</h3>
+                        <p>Colores principales utilizados en la interfaz.</p>
+                    </div>
+
+                    <div class="color-grid">
+                        <div class="color-card">
+                            <div class="color-preview color-primary"></div>
+                            <strong>Primary</strong>
+                            <span>#2563EB</span>
+                        </div>
+
+                        <div class="color-card">
+                            <div class="color-preview color-primary-dark"></div>
+                            <strong>Primary Dark</strong>
+                            <span>#1D4ED8</span>
+                        </div>
+
+                        <div class="color-card">
+                            <div class="color-preview color-secondary"></div>
+                            <strong>Secondary</strong>
+                            <span>#7C3AED</span>
+                        </div>
+
+                        <div class="color-card">
+                            <div class="color-preview color-background"></div>
+                            <strong>Background</strong>
+                            <span>#0F172A</span>
+                        </div>
+
+                        <div class="color-card">
+                            <div class="color-preview color-surface"></div>
+                            <strong>Surface</strong>
+                            <span>#1E293B</span>
+                        </div>
+
+                        <div class="color-card">
+                            <div class="color-preview color-success"></div>
+                            <strong>Success</strong>
+                            <span>#22C55E</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="design-block">
+                    <div class="design-block-header">
+                        <h3>Tipografía</h3>
+                        <p>Jerarquía visual utilizada en el portafolio.</p>
+                    </div>
+
+                    <div class="typography-demo">
+                        <h1>Heading 1</h1>
+                        <h2>Heading 2</h2>
+                        <h3>Heading 3</h3>
+                        <p>Este es un ejemplo de texto normal utilizado para contenido descriptivo.</p>
+                        <p class="text-muted">Este es un texto secundario con menor contraste.</p>
+                        <a href="#contacto">Ejemplo de enlace</a>
+                    </div>
+                </article>
+
+                <article class="design-block">
+                    <div class="design-block-header">
+                        <h3>Escala de espaciado</h3>
+                        <p>Sistema de separación utilizado para mantener consistencia visual.</p>
+                    </div>
+
+                    <div class="spacing-demo">
+                        <div class="spacing-item">
+                            <span>XS</span>
+                            <div class="spacing-box spacing-xs"></div>
+                            <small>0.25rem</small>
+                        </div>
+
+                        <div class="spacing-item">
+                            <span>SM</span>
+                            <div class="spacing-box spacing-sm"></div>
+                            <small>0.5rem</small>
+                        </div>
+
+                        <div class="spacing-item">
+                            <span>MD</span>
+                            <div class="spacing-box spacing-md"></div>
+                            <small>1rem</small>
+                        </div>
+
+                        <div class="spacing-item">
+                            <span>LG</span>
+                            <div class="spacing-box spacing-lg"></div>
+                            <small>2rem</small>
+                        </div>
+
+                        <div class="spacing-item">
+                            <span>XL</span>
+                            <div class="spacing-box spacing-xl"></div>
+                            <small>4rem</small>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="design-block">
+                    <div class="design-block-header">
+                        <h3>Componentes reutilizables</h3>
+                        <p>Componentes utilizados en diferentes partes del portafolio.</p>
+                    </div>
+
+                    <div class="components-demo">
+                        <div class="component-example">
+                            <h4>Botones</h4>
+                            <div class="component-row">
+                                <button class="btn btn-primary" type="button">Botón primario</button>
+                                <button class="btn btn-secondary" type="button">Botón secundario</button>
+                            </div>
+                        </div>
+
+                        <div class="component-example">
+                            <h4>Skill Badge</h4>
+                            <div class="component-row">
+                                <span class="skill-badge">JavaScript</span>
+                                <span class="skill-badge">Python</span>
+                                <span class="skill-badge">Django</span>
+                            </div>
+                        </div>
+
+                        <div class="component-example">
+                            <h4>Input</h4>
+                            <label for="demo-input">Nombre</label>
+                            <input type="text" id="demo-input" placeholder="Escribe tu nombre" />
+                        </div>
+
+                        <div class="component-example">
+                            <h4>Textarea</h4>
+                            <label for="demo-textarea">Mensaje</label>
+                            <textarea id="demo-textarea" rows="4" placeholder="Escribe un mensaje"></textarea>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </aside>
+    </div>
 
     <footer class="footer">
 

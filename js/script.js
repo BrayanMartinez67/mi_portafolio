@@ -289,3 +289,50 @@ if (backToTop) {
         });
     });
 }
+
+/* =====================================================
+   DESIGN SYSTEM FLOATING PANEL
+===================================================== */
+
+const designSystemToggle = document.getElementById("design-system-toggle");
+const designSystemPanel = document.getElementById("design-system-panel");
+const designSystemClose = document.getElementById("design-system-close");
+
+if (designSystemToggle && designSystemPanel) {
+    const openDesignSystem = () => {
+        designSystemPanel.classList.add("active");
+        designSystemPanel.setAttribute("aria-hidden", "false");
+        designSystemToggle.setAttribute("aria-expanded", "true");
+    };
+
+    const closeDesignSystem = () => {
+        designSystemPanel.classList.remove("active");
+        designSystemPanel.setAttribute("aria-hidden", "true");
+        designSystemToggle.setAttribute("aria-expanded", "false");
+    };
+
+    designSystemToggle.addEventListener("click", () => {
+        const isOpen = designSystemPanel.classList.contains("active");
+        if (isOpen) {
+            closeDesignSystem();
+        } else {
+            openDesignSystem();
+        }
+    });
+
+    if (designSystemClose) {
+        designSystemClose.addEventListener("click", closeDesignSystem);
+    }
+
+    designSystemPanel.addEventListener("click", (event) => {
+        if (event.target instanceof HTMLElement && event.target.dataset.close === "true") {
+            closeDesignSystem();
+        }
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && designSystemPanel.classList.contains("active")) {
+            closeDesignSystem();
+        }
+    });
+}
