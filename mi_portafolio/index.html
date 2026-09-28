@@ -28,10 +28,6 @@
 </head>
 
 <body>
-
-    <!-- =========================
-         HEADER / NAVEGACIÓN
-    ========================== -->
     <header class="header">
 
         <div class="container navbar">
@@ -65,40 +61,43 @@
                     class="nav-list"
                 >
                     <li>
-                        <a href="#inicio">Inicio</a>
+                        <a href="#inicio" data-i18n="nav.home">Inicio</a>
                     </li>
 
                     <li>
-                        <a href="#sobre-mi">Sobre mí</a>
+                        <a href="#sobre-mi" data-i18n="nav.about">Sobre mí</a>
                     </li>
 
                     <li>
-                        <a href="#skills">Habilidades</a>
+                        <a href="#skills" data-i18n="nav.skills">Habilidades</a>
                     </li>
 
                     <li>
-                        <a href="#proyectos">Proyectos</a>
+                        <a href="#proyectos" data-i18n="nav.projects">Proyectos</a>
                     </li>
 
                     <li>
-                        <a href="#design-system">Design System</a>
-                    </li>
-
-                    <li>
-                        <a href="#contacto">Contacto</a>
+                        <a href="#contacto" data-i18n="nav.contact">Contacto</a>
                     </li>
                 </ul>
 
             </nav>
 
-            <button
-                id="theme-toggle"
-                class="theme-toggle"
-                type="button"
-                aria-label="Cambiar a modo claro"
-            >
-                🌙
-            </button>
+            <div class="toolbar-actions">
+                <div class="lang-switch" aria-label="Selector de idioma">
+                    <button class="lang-btn active" type="button" data-lang="es" aria-label="Cambiar a español">ES</button>
+                    <button class="lang-btn" type="button" data-lang="en" aria-label="Switch to English">EN</button>
+                </div>
+
+                <button
+                    id="theme-toggle"
+                    class="theme-toggle"
+                    type="button"
+                    aria-label="Cambiar a modo claro"
+                >
+                    🌙
+                </button>
+            </div>
 
         </div>
 
@@ -106,10 +105,6 @@
 
 
     <main>
-
-        <!-- =========================
-             INICIO
-        ========================== -->
         <section
             id="inicio"
             class="hero section"
@@ -119,11 +114,11 @@
 
                 <div class="hero-text">
 
-                    <span class="section-tag">
+                    <span class="section-tag" data-i18n="hero.tag">
                         PORTAFOLIO PERSONAL
                     </span>
 
-                    <p class="hero-greeting">
+                    <p class="hero-greeting" data-i18n="hero.greeting">
                         Hola, soy
                     </p>
 
@@ -131,11 +126,11 @@
                         Brayan Martínez
                     </h1>
 
-                    <h2>
+                    <h2 data-i18n="hero.subtitle">
                         Estudiante de Ingeniería de Software
                     </h2>
 
-                    <p class="hero-description">
+                    <p class="hero-description" data-i18n="hero.description">
                         Soy estudiante de Ingeniería de Software apasionado
                         por el desarrollo de aplicaciones web, la inteligencia
                         artificial y la gestión de bases de datos. Me interesa
@@ -144,8 +139,8 @@
                     </p>
 
                     <div class="hero-meta" aria-label="Información rápida">
-                        <span>Disponible para proyectos</span>
-                        <span>Frontend · Backend · IA</span>
+                        <span data-i18n="hero.meta.one">Disponible para proyectos</span>
+                        <span data-i18n="hero.meta.two">Frontend · Backend · IA</span>
                     </div>
 
                     <div class="hero-actions">
@@ -153,6 +148,7 @@
                         <a
                             href="#proyectos"
                             class="btn btn-primary"
+                            data-i18n="hero.button.primary"
                         >
                             Ver proyectos
                         </a>
@@ -160,6 +156,7 @@
                         <a
                             href="#contacto"
                             class="btn btn-secondary"
+                            data-i18n="hero.button.secondary"
                         >
                             Contactarme
                         </a>
@@ -174,8 +171,8 @@
                     <div class="profile-image-wrapper">
 
                         <img
-                            src="img/perfil.svg"
-                            alt="Ilustración de Brayan Martínez"
+                            src="img/Perfil.png"
+                            alt="Foto de Brayan Martínez"
                         >
 
                     </div>
@@ -190,10 +187,6 @@
 
         </section>
 
-
-        <!-- =========================
-             SOBRE MÍ
-        ========================== -->
         <section
             id="sobre-mi"
             class="section section-alt"
@@ -375,10 +368,6 @@
 
         </section>
 
-
-        <!-- =========================
-             HABILIDADES
-        ========================== -->
         <section
             id="skills"
             class="section"
@@ -406,12 +395,11 @@
 
                 <div class="skills-grid">
 
-                    <!-- FRONTEND -->
                     <article class="skill-category">
 
                         <div class="skill-category-header">
                             <span class="category-icon">
-                                &lt;/&gt;
+                                <img src="icon/frontend.svg" alt="Icono frontend" width="24" height="24">
                             </span>
 
                             <div>
@@ -448,12 +436,11 @@
                     </article>
 
 
-                    <!-- BACKEND -->
                     <article class="skill-category">
 
                         <div class="skill-category-header">
                             <span class="category-icon">
-                                &lt;_&gt;
+                                <img src="icon/backend.svg" alt="Icono backend" width="24" height="24">
                             </span>
 
                             <div>
@@ -486,12 +473,11 @@
                     </article>
 
 
-                    <!-- BASES DE DATOS -->
                     <article class="skill-category">
 
                         <div class="skill-category-header">
                             <span class="category-icon">
-                                DB
+                                <img src="icon/database.svg" alt="Icono de bases de datos" width="24" height="24">
                             </span>
 
                             <div>
@@ -528,12 +514,11 @@
                     </article>
 
 
-                    <!-- HERRAMIENTAS -->
                     <article class="skill-category">
 
                         <div class="skill-category-header">
                             <span class="category-icon">
-                                ⚙
+                                <img src="icon/tools.svg" alt="Icono de herramientas" width="24" height="24">
                             </span>
 
                             <div>
@@ -571,10 +556,6 @@
 
         </section>
 
-
-        <!-- =========================
-             PROYECTOS
-        ========================== -->
         <section
             id="proyectos"
             class="section section-alt"
@@ -600,7 +581,6 @@
                 </div>
 
 
-                <!-- FILTROS -->
                 <div
                     class="project-filters"
                     aria-label="Filtrar proyectos"
@@ -643,7 +623,6 @@
 
                 <div class="projects-grid">
 
-                    <!-- PROYECTO 1 -->
                     <article
                         class="project-card"
                         data-category="ia django"
@@ -652,8 +631,8 @@
                         <figure class="project-image">
 
                             <img
-                                src="img/proyecto-1.svg"
-                                alt="Ilustración del proyecto BananoTech IA"
+                                src="img/Proyecto1.png"
+                                alt="Dashboard de SmartSoft Analyzer"
                             >
 
                         </figure>
@@ -666,13 +645,13 @@
                             </span>
 
                             <h3>
-                                BananoTech IA
+                                SmartSoft Analyzer
                             </h3>
 
                             <p>
-                                Aplicativo web orientado a la clasificación
-                                del banano destinado a exportación y consumo
-                                local mediante Inteligencia Artificial.
+                                Sistema de evaluación de aplicaciones que permite
+                                analizar, supervisar y gestionar evaluaciones con
+                                una interfaz intuitiva centrada en la toma de decisiones.
                             </p>
 
 
@@ -683,10 +662,10 @@
                                 </strong>
 
                                 <p>
-                                    Busca facilitar la clasificación del
-                                    banano mediante una aplicación web que
-                                    utiliza inteligencia artificial para
-                                    apoyar el análisis y la toma de decisiones.
+                                    Ayuda a centralizar la evaluación de aplicaciones,
+                                    visualizando resultados, reportes y usuarios en un
+                                    solo panel para facilitar la revisión y seguimiento
+                                    de cada proceso de análisis.
                                 </p>
 
                             </div>
@@ -707,7 +686,7 @@
                                 </span>
 
                                 <span class="skill-badge">
-                                    PostgreSQL
+                                    Dashboard
                                 </span>
 
                             </div>
@@ -716,19 +695,12 @@
                             <div class="project-links">
 
                                 <a
-                                    href="#"
+                                    href="https://github.com/BrayanMartinez67/SmartSoft-Analyzer"
                                     class="btn btn-primary"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    GitHub
-                                </a>
-
-                                <a
-                                    href="#"
-                                    class="btn btn-secondary"
-                                >
-                                    Ver proyecto
+                                    Visualizar proyecto en GitHub
                                 </a>
 
                             </div>
@@ -738,17 +710,16 @@
                     </article>
 
 
-                    <!-- PROYECTO 2 -->
                     <article
                         class="project-card"
-                        data-category="web django"
+                        data-category="web django ia"
                     >
 
                         <figure class="project-image">
 
                             <img
-                                src="img/proyecto-2.svg"
-                                alt="Ilustración del sistema de gestión médica"
+                                src="img/Proyecto2.png"
+                                alt="Interfaz de ECORUTA"
                             >
 
                         </figure>
@@ -757,17 +728,17 @@
                         <div class="project-content">
 
                             <span class="project-category">
-                                Desarrollo Web
+                                IA y Sostenibilidad
                             </span>
 
                             <h3>
-                                Sistema de Gestión Médica
+                                ECORUTA
                             </h3>
 
                             <p>
-                                Aplicación web para gestionar información
-                                de pacientes, médicos, citas, atenciones
-                                y exámenes médicos.
+                                Aplicación inteligente que clasifica residuos mediante IA
+                                para identificar si son orgánicos, reciclables o peligrosos,
+                                promoviendo una mejor gestión ambiental.
                             </p>
 
 
@@ -778,10 +749,9 @@
                                 </strong>
 
                                 <p>
-                                    Permite organizar la información de
-                                    pacientes, médicos, citas y atenciones,
-                                    facilitando la consulta y administración
-                                    de los registros.
+                                    Facilita la separación correcta de desechos y ayuda a
+                                    las personas a identificar el tipo de residuo en tiempo real,
+                                    reduciendo errores de clasificación y apoyando la sostenibilidad.
                                 </p>
 
                             </div>
@@ -798,11 +768,11 @@
                                 </span>
 
                                 <span class="skill-badge">
-                                    SQLite
+                                    IA
                                 </span>
 
                                 <span class="skill-badge">
-                                    Bootstrap
+                                    Medio ambiente
                                 </span>
 
                             </div>
@@ -811,19 +781,12 @@
                             <div class="project-links">
 
                                 <a
-                                    href="#"
+                                    href="https://github.com/BrayanMartinez67/ECURUTA"
                                     class="btn btn-primary"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    GitHub
-                                </a>
-
-                                <a
-                                    href="#"
-                                    class="btn btn-secondary"
-                                >
-                                    Ver proyecto
+                                    Visualizar proyecto en GitHub
                                 </a>
 
                             </div>
@@ -833,17 +796,16 @@
                     </article>
 
 
-                    <!-- PROYECTO 3 -->
                     <article
                         class="project-card"
-                        data-category="web django"
+                        data-category="web ia"
                     >
 
                         <figure class="project-image">
 
                             <img
-                                src="img/proyecto-3.svg"
-                                alt="Ilustración del sistema de gestión académica"
+                                src="img/Proyecto%203.png"
+                                alt="Ilustración de Moda Maid"
                             >
 
                         </figure>
@@ -852,17 +814,17 @@
                         <div class="project-content">
 
                             <span class="project-category">
-                                Desarrollo Web
+                                IA y Estilo Personal
                             </span>
 
                             <h3>
-                                Sistema de Gestión Académica
+                                Moda Maid
                             </h3>
 
                             <p>
-                                Aplicación web para administrar períodos,
-                                profesores, estudiantes y calificaciones
-                                académicas.
+                                Aplicación impulsada por inteligencia artificial que recomienda
+                                outfits según la ropa que llevas puesta y permite gestionar un
+                                armario digital con tus prendas y combinaciones.
                             </p>
 
 
@@ -873,10 +835,9 @@
                                 </strong>
 
                                 <p>
-                                    Facilita la administración de períodos
-                                    académicos, profesores, estudiantes y
-                                    calificaciones mediante información
-                                    centralizada.
+                                    Ayuda a las personas a decidir cómo vestirse con base en lo
+                                    que ya tienen en su closet, brindando sugerencias de estilo y
+                                    una organización visual de su guardarropa personal.
                                 </p>
 
                             </div>
@@ -885,19 +846,19 @@
                             <div class="project-technologies">
 
                                 <span class="skill-badge">
+                                    IA
+                                </span>
+
+                                <span class="skill-badge">
                                     Python
                                 </span>
 
                                 <span class="skill-badge">
-                                    Django
+                                    Web
                                 </span>
 
                                 <span class="skill-badge">
-                                    SQLite
-                                </span>
-
-                                <span class="skill-badge">
-                                    JavaScript
+                                    Fashion Tech
                                 </span>
 
                             </div>
@@ -906,19 +867,12 @@
                             <div class="project-links">
 
                                 <a
-                                    href="#"
+                                    href="https://github.com/BrayanMartinez67/Moda-Maind_Martinez_Guerrero_Ledesma"
                                     class="btn btn-primary"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    GitHub
-                                </a>
-
-                                <a
-                                    href="#"
-                                    class="btn btn-secondary"
-                                >
-                                    Ver proyecto
+                                    Visualizar proyecto en GitHub
                                 </a>
 
                             </div>
@@ -932,378 +886,6 @@
             </div>
 
         </section>
-
-
-        <!-- =========================
-             DESIGN SYSTEM
-        ========================== -->
-        <section
-            id="design-system"
-            class="section"
-        >
-
-            <div class="container">
-
-                <div class="section-header">
-
-                    <span class="section-tag">
-                        DESIGN SYSTEM
-                    </span>
-
-                    <h2>
-                        Sistema de diseño
-                    </h2>
-
-                    <p>
-                        Elementos visuales y componentes reutilizables
-                        utilizados en este portafolio.
-                    </p>
-
-                </div>
-
-
-                <!-- COLORES -->
-                <article class="design-block">
-
-                    <div class="design-block-header">
-                        <h3>
-                            Paleta de colores
-                        </h3>
-
-                        <p>
-                            Colores principales utilizados en la interfaz.
-                        </p>
-                    </div>
-
-
-                    <div class="color-grid">
-
-                        <div class="color-card">
-
-                            <div
-                                class="color-preview color-primary"
-                            ></div>
-
-                            <strong>
-                                Primary
-                            </strong>
-
-                            <span>
-                                #2563EB
-                            </span>
-
-                        </div>
-
-
-                        <div class="color-card">
-
-                            <div
-                                class="color-preview color-primary-dark"
-                            ></div>
-
-                            <strong>
-                                Primary Dark
-                            </strong>
-
-                            <span>
-                                #1D4ED8
-                            </span>
-
-                        </div>
-
-
-                        <div class="color-card">
-
-                            <div
-                                class="color-preview color-secondary"
-                            ></div>
-
-                            <strong>
-                                Secondary
-                            </strong>
-
-                            <span>
-                                #7C3AED
-                            </span>
-
-                        </div>
-
-
-                        <div class="color-card">
-
-                            <div
-                                class="color-preview color-background"
-                            ></div>
-
-                            <strong>
-                                Background
-                            </strong>
-
-                            <span>
-                                #0F172A
-                            </span>
-
-                        </div>
-
-
-                        <div class="color-card">
-
-                            <div
-                                class="color-preview color-surface"
-                            ></div>
-
-                            <strong>
-                                Surface
-                            </strong>
-
-                            <span>
-                                #1E293B
-                            </span>
-
-                        </div>
-
-
-                        <div class="color-card">
-
-                            <div
-                                class="color-preview color-success"
-                            ></div>
-
-                            <strong>
-                                Success
-                            </strong>
-
-                            <span>
-                                #22C55E
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- TIPOGRAFÍA -->
-                <article class="design-block">
-
-                    <div class="design-block-header">
-                        <h3>
-                            Tipografía
-                        </h3>
-
-                        <p>
-                            Jerarquía visual utilizada en el portafolio.
-                        </p>
-                    </div>
-
-
-                    <div class="typography-demo">
-
-                        <h1>
-                            Heading 1
-                        </h1>
-
-                        <h2>
-                            Heading 2
-                        </h2>
-
-                        <h3>
-                            Heading 3
-                        </h3>
-
-                        <p>
-                            Este es un ejemplo de texto normal utilizado
-                            para contenido descriptivo.
-                        </p>
-
-                        <p class="text-muted">
-                            Este es un texto secundario con menor contraste.
-                        </p>
-
-                        <a href="#contacto">
-                            Ejemplo de enlace
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- ESPACIADO -->
-                <article class="design-block">
-
-                    <div class="design-block-header">
-
-                        <h3>
-                            Escala de espaciado
-                        </h3>
-
-                        <p>
-                            Sistema de separación utilizado para mantener
-                            consistencia visual.
-                        </p>
-
-                    </div>
-
-
-                    <div class="spacing-demo">
-
-                        <div class="spacing-item">
-                            <span>XS</span>
-                            <div class="spacing-box spacing-xs"></div>
-                            <small>0.25rem</small>
-                        </div>
-
-                        <div class="spacing-item">
-                            <span>SM</span>
-                            <div class="spacing-box spacing-sm"></div>
-                            <small>0.5rem</small>
-                        </div>
-
-                        <div class="spacing-item">
-                            <span>MD</span>
-                            <div class="spacing-box spacing-md"></div>
-                            <small>1rem</small>
-                        </div>
-
-                        <div class="spacing-item">
-                            <span>LG</span>
-                            <div class="spacing-box spacing-lg"></div>
-                            <small>2rem</small>
-                        </div>
-
-                        <div class="spacing-item">
-                            <span>XL</span>
-                            <div class="spacing-box spacing-xl"></div>
-                            <small>4rem</small>
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- COMPONENTES -->
-                <article class="design-block">
-
-                    <div class="design-block-header">
-
-                        <h3>
-                            Componentes reutilizables
-                        </h3>
-
-                        <p>
-                            Componentes utilizados en diferentes partes
-                            del portafolio.
-                        </p>
-
-                    </div>
-
-
-                    <div class="components-demo">
-
-                        <div class="component-example">
-
-                            <h4>
-                                Botones
-                            </h4>
-
-                            <div class="component-row">
-
-                                <button
-                                    class="btn btn-primary"
-                                    type="button"
-                                >
-                                    Botón primario
-                                </button>
-
-                                <button
-                                    class="btn btn-secondary"
-                                    type="button"
-                                >
-                                    Botón secundario
-                                </button>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="component-example">
-
-                            <h4>
-                                Skill Badge
-                            </h4>
-
-                            <div class="component-row">
-
-                                <span class="skill-badge">
-                                    JavaScript
-                                </span>
-
-                                <span class="skill-badge">
-                                    Python
-                                </span>
-
-                                <span class="skill-badge">
-                                    Django
-                                </span>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="component-example">
-
-                            <h4>
-                                Input
-                            </h4>
-
-                            <label for="demo-input">
-                                Nombre
-                            </label>
-
-                            <input
-                                type="text"
-                                id="demo-input"
-                                placeholder="Escribe tu nombre"
-                            >
-
-                        </div>
-
-
-                        <div class="component-example">
-
-                            <h4>
-                                Textarea
-                            </h4>
-
-                            <label for="demo-textarea">
-                                Mensaje
-                            </label>
-
-                            <textarea
-                                id="demo-textarea"
-                                rows="4"
-                                placeholder="Escribe un mensaje"
-                            ></textarea>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             CONTACTO
-        ========================== -->
         <section
             id="contacto"
             class="section section-alt"
@@ -1331,7 +913,6 @@
 
                 <div class="contact-grid">
 
-                    <!-- INFORMACIÓN -->
                     <aside class="contact-info">
 
                         <h3>
@@ -1348,7 +929,7 @@
                         <div class="contact-item">
 
                             <span class="contact-icon">
-                                @
+                                <img src="icon/email.svg" alt="Correo electrónico" width="20" height="20">
                             </span>
 
                             <div>
@@ -1357,8 +938,8 @@
                                     Correo electrónico
                                 </span>
 
-                                <a href="mailto:tu-correo@example.com">
-                                    tu-correo@example.com
+                                <a href="mailto:brayanmosqueramiguel@hotmail.com">
+                                    brayanmosqueramiguel@hotmail.com
                                 </a>
 
                             </div>
@@ -1369,7 +950,7 @@
                         <div class="contact-item">
 
                             <span class="contact-icon">
-                                GH
+                                <img src="icon/github.svg" alt="GitHub" width="20" height="20">
                             </span>
 
                             <div>
@@ -1379,7 +960,7 @@
                                 </span>
 
                                 <a
-                                    href="#"
+                                    href="https://github.com/BrayanMartinez67"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
@@ -1393,7 +974,6 @@
                     </aside>
 
 
-                    <!-- FORMULARIO -->
                     <div class="contact-form-wrapper">
 
                         <form
@@ -1497,10 +1077,6 @@
 
     </main>
 
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
     <footer class="footer">
 
         <div class="container footer-content">
@@ -1517,8 +1093,6 @@
 
     </footer>
 
-
-    <!-- BOTÓN VOLVER ARRIBA -->
     <button
         id="back-to-top"
         class="back-to-top"
@@ -1534,4 +1108,3 @@
 </body>
 
 </html>
-```

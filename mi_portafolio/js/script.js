@@ -1,7 +1,3 @@
-/* =====================================================
-   MENÚ RESPONSIVE
-===================================================== */
-
 const menuToggle = document.getElementById("menu-toggle");
 const navList = document.getElementById("nav-list");
 
@@ -35,12 +31,6 @@ if (menuToggle && navList) {
         });
     });
 }
-
-
-/* =====================================================
-   MODO CLARO / OSCURO
-===================================================== */
-
 const themeToggle = document.getElementById("theme-toggle");
 
 if (themeToggle) {
@@ -70,7 +60,6 @@ if (themeToggle) {
             try {
                 localStorage.setItem("theme", "light");
             } catch (error) {
-                // Ignorar si el almacenamiento no está disponible.
             }
 
             themeToggle.textContent = "☀️";
@@ -79,7 +68,6 @@ if (themeToggle) {
             try {
                 localStorage.setItem("theme", "dark");
             } catch (error) {
-                // Ignorar si el almacenamiento no está disponible.
             }
 
             themeToggle.textContent = "🌙";
@@ -88,10 +76,85 @@ if (themeToggle) {
     });
 }
 
+const translations = {
+    es: {
+        "nav.home": "Inicio",
+        "nav.about": "Sobre mí",
+        "nav.skills": "Habilidades",
+        "nav.projects": "Proyectos",
+        "nav.contact": "Contacto",
+        "hero.tag": "PORTAFOLIO PERSONAL",
+        "hero.greeting": "Hola, soy",
+        "hero.subtitle": "Estudiante de Ingeniería de Software",
+        "hero.description": "Soy estudiante de Ingeniería de Software apasionado por el desarrollo de aplicaciones web, la inteligencia artificial y la gestión de bases de datos. Me interesa crear soluciones tecnológicas funcionales, modernas y fáciles de utilizar.",
+        "hero.meta.one": "Disponible para proyectos",
+        "hero.meta.two": "Frontend · Backend · IA",
+        "hero.button.primary": "Ver proyectos",
+        "hero.button.secondary": "Contactarme"
+    },
+    en: {
+        "nav.home": "Home",
+        "nav.about": "About me",
+        "nav.skills": "Skills",
+        "nav.projects": "Projects",
+        "nav.contact": "Contact",
+        "hero.tag": "PERSONAL PORTFOLIO",
+        "hero.greeting": "Hi, I am",
+        "hero.subtitle": "Software Engineering Student",
+        "hero.description": "I am a Software Engineering student passionate about web application development, artificial intelligence, and database management. I am interested in creating functional, modern, and easy-to-use technological solutions.",
+        "hero.meta.one": "Available for projects",
+        "hero.meta.two": "Frontend · Backend · AI",
+        "hero.button.primary": "View projects",
+        "hero.button.secondary": "Contact me"
+    }
+};
 
-/* =====================================================
-   FILTRO DE PROYECTOS
-===================================================== */
+const langButtons = document.querySelectorAll(".lang-btn");
+const i18nNodes = document.querySelectorAll("[data-i18n]");
+
+let currentLanguage = "es";
+
+const applyLanguage = (language) => {
+    currentLanguage = language;
+    document.documentElement.lang = language;
+
+    i18nNodes.forEach((node) => {
+        const key = node.dataset.i18n;
+        const translation = translations[language]?.[key];
+
+        if (translation) {
+            node.textContent = translation;
+        }
+    });
+
+    langButtons.forEach((button) => {
+        const isActive = button.dataset.lang === language;
+        button.classList.toggle("active", isActive);
+        button.setAttribute("aria-pressed", String(isActive));
+    });
+
+    try {
+        localStorage.setItem("lang", language);
+    } catch (error) {
+    }
+};
+
+langButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        applyLanguage(button.dataset.lang);
+    });
+});
+
+let savedLanguage = "es";
+
+try {
+    savedLanguage = localStorage.getItem("lang") || "es";
+} catch (error) {
+    savedLanguage = "es";
+}
+
+applyLanguage(savedLanguage);
+
 
 const filterButtons = document.querySelectorAll(".filter-btn");
 const projectCards = document.querySelectorAll(".project-card");
@@ -121,9 +184,31 @@ if (filterButtons.length > 0 && projectCards.length > 0) {
 }
 
 
-/* =====================================================
-   VALIDACIÓN DEL FORMULARIO
-===================================================== */
+const revealItems = document.querySelectorAll(
+    ".section-header, .about-grid, .highlight-item, .skill-category, .project-card, .contact-grid, .contact-info, .contact-form-wrapper"
+);
+
+if (revealItems.length > 0 && "IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.14,
+        rootMargin: "0px 0px -30px 0px"
+    });
+
+    revealItems.forEach((item) => {
+        item.classList.add("reveal");
+        revealObserver.observe(item);
+    });
+} else {
+    revealItems.forEach((item) => item.classList.add("visible"));
+}
+
 
 const contactForm = document.getElementById("contact-form");
 
@@ -185,10 +270,6 @@ if (contactForm) {
     });
 }
 
-
-/* =====================================================
-   BOTÓN VOLVER ARRIBA
-===================================================== */
 
 const backToTop = document.getElementById("back-to-top");
 
